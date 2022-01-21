@@ -18,6 +18,11 @@ class Program
         return this.a;
     }
 
+    private void say()
+    {
+        System.Console.WriteLine("private void say");
+    }
+
     static void Main(string[] args)
     {
         Program p = new Program(100);

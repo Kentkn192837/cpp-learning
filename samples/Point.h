@@ -10,4 +10,8 @@ class Point
         double getY();                      // y座標を返すゲッタ
         Point operator+(const Point &p);    // +演算子のオーバーロード
         Point operator-(const Point &p);    // -演算子のオーバーロード
+        bool operator==(const Point &p);    // ==演算子のオーバーロード
+        bool operator!=(const Point &p);    // !=演算子のオーバーロード
+        friend std::istream &operator>>(std::istream &is, Point &p); // >>演算子のオーバーロード
+        friend std::ostream &operator<<(std::ostream &os, const Point &p); // <<演算子のオーバーロード
 };

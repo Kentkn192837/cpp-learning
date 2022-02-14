@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Point.h"
 
 // コンストラクタの実装
@@ -27,8 +28,34 @@ Point Point::operator+(const Point &p)
 }
 
 // - 演算子のオーバーロードの実装
-Point Point::operator+(const Point &p)
+Point Point::operator-(const Point &p)
 {
     Point ans(this->x - p.x, this->y - p.y);
     return ans;
+}
+
+// == 演算子のオーバーロードの実装
+bool Point::operator==(const Point &p)
+{
+    return this->x == p.x && this->y == p.y;
+}
+
+// != 演算子のオーバーロードの実装
+bool Point::operator!=(const Point &p)
+{
+    return !(*this == p);
+}
+
+// >> 演算子のオーバーロードの実装
+std::istream &operator>>(std::istream &is, Point &p)
+{
+    is >> p.x >> p.y;
+    return is;
+}
+
+// << 演算子のオーバーロードの実装
+std::ostream &operator<<(std::ostream &os, const Point &p)
+{
+    os << "x = " << p.x << ", y = " << p.y;
+    return os;
 }

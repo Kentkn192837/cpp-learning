@@ -1,4 +1,4 @@
-/* g++ -std=c++17 list13_13 list13_13.cpp */
+/* g++ -std=c++17 -o list13_13 list13_13.cpp */
 #include <iostream>
 #include <string>
 
